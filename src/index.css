@@ -1,0 +1,119 @@
+:root {
+  --bg: #121212;
+  --card-bg: #1c1c1c;
+  --text: #e6e6e6;
+  --subtle: #b3b3b3;
+  --accent: #3ef0b4; /* Soft neon green */
+  --danger: #ff4f4f;
+  --radius: 10px;
+  --shadow: 0 0 12px rgba(62, 240, 180, 0.3);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+.todo-wrapper {
+  background: var(--card-bg);
+  width: 450px;
+  padding: 24px;
+  border-radius: var(--radius);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--accent);
+  text-shadow: var(--shadow);
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: var(--radius);
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--text);
+  font-size: 1rem;
+  outline: none;
+  box-shadow: var(--shadow);
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+button:hover {
+  box-shadow: var(--shadow);
+  opacity: 0.9;
+}
+
+.section-title {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: var(--subtle);
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  padding: 12px;
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+}
+
+.task-text {
+  flex: 1;
+}
+
+.task-text.done {
+  text-decoration: line-through;
+  color: var(--subtle);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.mark-all {
+  width: 100%;
+  margin-top: 10px;
+}
